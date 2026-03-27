@@ -352,15 +352,3 @@ class Chopper:
             disable_after=disable_after,
             callback=callback,
         )
-
-
-
-PORT = chopper_port()
-
-with Chopper(PORT) as chopper:
-    #chopper.open()
-
-    print(chopper.get_id())
-    chopper.sweep_frequency_range(100, 1000, 50, 5, True, True)
-
-    chopper.close()
